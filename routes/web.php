@@ -24,3 +24,12 @@ Route::get('/second/{id}', function ($id) {
 });
 
 Route::redirect('welcome',"come",301);
+
+
+Route::get('/controlled/{id}','Tutorial@show');
+
+
+Route::get('/third/{name}',function($name){
+    // return view('third',['name' => 'Stanslaus']);
+    return view('third',['name' => $name]);
+});

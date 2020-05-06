@@ -16,6 +16,11 @@ Route::get('/', function () {
 });
 
 
-Route::get('/first', function () {
-    return view('first');
+Route::view('/first', 'first');
+
+// Add parameters to the url
+Route::get('/second/{id}', function ($id) {
+    return "Some parmater " . $id;
 });
+
+Route::redirect('welcome',"come",301);

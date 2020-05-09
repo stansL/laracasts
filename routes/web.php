@@ -29,6 +29,7 @@ Route::redirect('welcome',"come",301);
 
 
 Route::get('/about','About@load');
+Route::get('/middleware/{age}','Middleware@load') -> middleware('age');
 
 Route::get('/forms','Forms@processForm');
 Route::post('/submit','Forms@submitForm');

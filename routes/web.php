@@ -30,6 +30,8 @@ Route::redirect('welcome',"come",301);
 
 Route::get('/about','About@load');
 
+Route::get('/requests/{id}','Requests@load');
+
 Route::get('/tutorial/{id}','Tutorial@show');
 
 

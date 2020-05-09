@@ -18,6 +18,8 @@ Route::get('/', function () {
 
 Route::view('/first', 'first');
 
+Route::view('/contacts', 'contacts');
+
 // Add parameters to the url
 Route::get('/second/{id}', function ($id) {
     return "Some parmater " . $id;
@@ -26,7 +28,9 @@ Route::get('/second/{id}', function ($id) {
 Route::redirect('welcome',"come",301);
 
 
-Route::get('/controlled/{id}','Tutorial@show');
+Route::get('/about','About@load');
+
+Route::get('/tutorial/{id}','Tutorial@show');
 
 
 Route::get('/third/{name}',function($name){

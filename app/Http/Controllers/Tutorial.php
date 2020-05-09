@@ -9,6 +9,6 @@ class Tutorial extends Controller {
 
     public function show( $id ) {
         // echo 'Hello from the new controller!'.$id;
-        return view( 'welcome' );
+        return view( 'tutorial',['id' => $id] );
     }
 }

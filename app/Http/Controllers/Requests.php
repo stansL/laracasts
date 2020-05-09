@@ -14,4 +14,5 @@ class Requests extends Controller
         $all = $request -> all();
         print_r($all);
     }
+
 }

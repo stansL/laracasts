@@ -25,6 +25,7 @@ Route::get('/second/{id}', function ($id) {
     return "Some parmater " . $id;
 });
 
+
 Route::redirect('welcome',"come",301);
 
 
@@ -46,3 +47,5 @@ Route::get('/third/{name}',function($name){
 
 Route::get('/sessions','Sessions@show');
 Route::post('/sessions','Sessions@posts');
+
+Route::get('/localization','Localization@show') ;

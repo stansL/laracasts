@@ -85,6 +85,16 @@
                 </div>
 
                 <div class="links">
+
+                    @if($errors -> any())
+                        <div> 
+                            <ul>
+                                @foreach($errors -> all() as $err)
+                                <li> {{ $err }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    @endif
                     <form method = "POST" action = "{{URL::to('/submit')}}"> 
                         <input name = "username"type = "text" placeholder = "User Name" /><br />
                         <input name = "password"type = "password" placeholder = "Password" /><br />

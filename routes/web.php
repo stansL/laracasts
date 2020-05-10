@@ -49,3 +49,5 @@ Route::get('/sessions','Sessions@show');
 Route::post('/sessions','Sessions@posts');
 
 Route::get('/localization','Localization@show') ;
+
+Route::view('/blade','bladestuff') ;

@@ -68,6 +68,9 @@
             <div class="content">
                 <div class="title m-b-md">
                     Localization <br /> {{ __('message.welcome_msg')}}
+
+                    <br />
+                    {{' blade template'}}
                 </div>
 
                 <div class="links">

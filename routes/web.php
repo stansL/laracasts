@@ -43,3 +43,6 @@ Route::get('/third/{name}',function($name){
     // return view('third',['name' => 'Stanslaus']);
     return view('third',['name' => $name]);
 });
+
+Route::get('/sessions','Sessions@show');
+Route::post('/sessions','Sessions@posts');

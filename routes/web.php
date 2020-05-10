@@ -26,28 +26,29 @@ Route::get('/second/{id}', function ($id) {
 });
 
 
-Route::redirect('welcome',"come",301);
+Route::redirect('welcome', "come", 301);
 
 
-Route::get('/about','About@load');
-Route::get('/middleware/{age}','Middleware@load') -> middleware('age');
+Route::get('/about', 'About@load');
+Route::get('/middleware/{age}', 'Middleware@load') -> middleware('age');
 
-Route::get('/forms','Forms@processForm');
-Route::post('/submit','Forms@submitForm');
+Route::get('/forms', 'Forms@processForm');
+Route::post('/submit', 'Forms@submitForm');
 
-Route::get('/requests/{id}','Requests@load');
+Route::get('/requests/{id}', 'Requests@load');
 
-Route::get('/tutorial/{id}','Tutorial@show');
+Route::get('/tutorial/{id}', 'Tutorial@show');
 
 
-Route::get('/third/{name}',function($name){
+Route::get('/third/{name}', function ($name) {
     // return view('third',['name' => 'Stanslaus']);
-    return view('third',['name' => $name]);
+    return view('third', ['name' => $name]);
 });
 
-Route::get('/sessions','Sessions@show');
-Route::post('/sessions','Sessions@posts');
+Route::get('/sessions', 'Sessions@show');
+Route::post('/sessions', 'Sessions@posts');
 
-Route::get('/localization','Localization@show') ;
+Route::get('/localization', 'Localization@show') ;
 
-Route::view('/blade','bladestuff') ;
+Route::view('/blade', 'bladestuff') ;
+Route::get('/databases', 'Databases@update') ;

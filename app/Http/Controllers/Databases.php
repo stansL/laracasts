@@ -32,7 +32,9 @@ class Databases extends Controller
 
     public function delete()
     {
-        $affected =  DB::delete('delete from users where person_id = ?', [8]);
+        $affected =  DB::table('users')
+        -> where('person_id',5)
+        -> delete();
         echo $affected;
     }
 }

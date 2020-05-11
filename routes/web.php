@@ -51,4 +51,6 @@ Route::post('/sessions', 'Sessions@posts');
 Route::get('/localization', 'Localization@show') ;
 
 Route::view('/blade', 'bladestuff') ;
-Route::get('/databases', 'Databases@update') ;
+Route::get('/databases', 'Databases@delete') ;
+
+Route::get('/eloquent', 'Eloquent@show') ;
